@@ -37,72 +37,34 @@
         <main>
             <h2 class="titulo-principal">CARRITO DE COMPRAS</h2>
             <div class="contenedor-carrito">
-                <div class="carrito-vacio">
+                <div id="carrito-vacio" class="carrito-vacio">
                     <p>El carrito se encuentra vacío <i class="bi bi-emoji-frown"></i></p>
                 </div>
-                <div class="carrito-productos disabled">
-                    <div class="carrito-producto">
-                        <img class="carrito-producto-img" src="./recursos/imagenes/productos/funkos/funko-pikle-rick.webp" alt="funko-pikle">
-                        <div class="carrito-producto-titulo">
-                            <small>titulo</small>
-                            <h3>funko-pikle-rick</h3>
-                        </div>
-                        <div class="carrito-producto-cantidad">
-                            <small>Cantidad</small>
-                            <p>1</p>
-                        </div>
-                        <div class="carrito-producto-precio">
-                            <small>Precio</small>
-                            <p>$1000</p>
-                        </div>
-                        <div class="carrito-producto-subtotal">
-                            <small>Subtotal</small>
-                            <p>$1000</p>
-                        </div>
-                        <button class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
-                    </div>
-                    <div class="carrito-producto">
-                        <img class="carrito-producto-img" src="./recursos/imagenes/productos/funkos/funko-pop-summer-rick-y-morty.jpg" alt="funko-summer">
-                        <div class="carrito-producto-titulo">
-                            <small>titulo</small>
-                            <h3>funko-summer</h3>
-                        </div>
-                        <div class="carrito-producto-cantidad">
-                            <small>Cantidad</small>
-                            <p>3</p>
-                        </div>
-                        <div class="carrito-producto-precio">
-                            <small>Precio</small>
-                            <p>$1000</p>
-                        </div>
-                        <div class="carrito-producto-subtotal">
-                            <small>Subtotal</small>
-                            <p>$3000</p>
-                        </div>
-                        <button class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
-                    </div>
+                <div id="carrito-productos" class="carrito-productos disabled">
+                    
                 </div>
 
-                <div class="carrito-acciones disabled">
+                <div id="carrito-acciones" class="carrito-acciones disabled">
                     <div class="carrito-acciones-izq">
-                        <button class="carrito-acciones-vaciar">Vaciar carrito</button>
+                        <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
                     </div>
                     <div class="carrito-acciones-der">
                         <div class="carrito-acciones-total">
                             <p>total</p>
-                            <p class="total">$4000</p>
+                            <p id="total" class="total"></p>
                         </div>
-                        <button class="carrito-acciones-comprar">Comprar ahora</button>
+                        <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
                     </div>
                 </div>
 
-                <p class="carrito-comprado disabled">Muchas gracias por tu compra! <i class="bi bi-emoji-laughing"></i></p>
-
             </div>
+            <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra! <i class="bi bi-emoji-laughing"></i></p>
         </main>
 
     </div>
-
+    
+    <Script src="js/carrito.js"></Script>
     <Script src="js/main.js"></Script>
+    
 </body>
 </html>
