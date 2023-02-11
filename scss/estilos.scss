@@ -76,12 +76,11 @@ aside{
         gap: 1rem;
         padding: .5rem;
         font-weight: 600;
-        
+        width: 100%;
     }
     .active{
         background-color: $colormorty;
         color: $colornegro;
-        width: 100%;
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
         position: relative;

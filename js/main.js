@@ -3,8 +3,8 @@ const productos = [
     // electronica
     {
         id: "electronica-01",
-        titulo: "Abrigo 01",
-        imagen: "./recursos/productos/electronica/cargador-morty.jpg",
+        titulo: "Cargador Morty",
+        imagen: "./recursos/imagenes/productos/electronica/cargador-morty.jpg",
         categoria: {
             nombre: "Cargador Morty",
             id: "electronica"
@@ -15,7 +15,7 @@ const productos = [
     {
         id: "funko-01",
         titulo: "Funko Pikle Rick",
-        imagen: "./recursos/productos/funkos/funko-pikle-rick.webp",
+        imagen: "./recursos/imagenes/productos/funkos/funko-pikle-rick.webp",
         categoria: {
             nombre: "Funkos",
             id: "funkos"
@@ -25,7 +25,7 @@ const productos = [
     {
         id: "funko-02",
         titulo: "Funko JERRY",
-        imagen: "./recursos/productos/funkos/funko-pop-jerry-smith-rick-and-morty.jpg",
+        imagen: "./recursos/imagenes/productos/funkos/funko-pop-jerry-smith-rick-and-morty.jpg",
         categoria: {
             nombre: "Funkos",
             id: "funkos"
@@ -35,7 +35,7 @@ const productos = [
     {
         id: "funko-03",
         titulo: "Funko SUMMER",
-        imagen: "./recursos/productos/funkos/funko-pop-summer-rick-y-morty.jpg",
+        imagen: "./recursos/imagenes/productos/funkos/funko-pop-summer-rick-y-morty.jpg",
         categoria: {
             nombre: "Funkos",
             id: "funkos"
@@ -45,7 +45,7 @@ const productos = [
     {
         id: "funko-04",
         titulo: "Funko UNITY",
-        imagen: "./recursos/productos/funkos/funko-unidad.jpg",
+        imagen: "./recursos/imagenes/productos/funkos/funko-unidad.jpg",
         categoria: {
             nombre: "Funkos",
             id: "funkos"
@@ -57,7 +57,7 @@ const productos = [
     {
         id: "medias-01",
         titulo: "Medias Rick",
-        imagen: "./recursos/productos/indumentaria/medias-rick.jfif",
+        imagen: "./recursos/imagenes/productos/indumentaria/medias-rick.jfif",
         categoria: {
             nombre: "Indumentaria",
             id: "indumentaria"
@@ -67,7 +67,7 @@ const productos = [
     {
         id: "medias-02",
         titulo: "Medias RyM",
-        imagen: "./recursos/productos/indumentaria/medias-rym.jpg",
+        imagen: "./recursos/imagenes/productos/indumentaria/medias-rym.jpg",
         categoria: {
             nombre: "Indumentaria",
             id: "indumentaria"
@@ -77,7 +77,7 @@ const productos = [
     {
         id: "mochila-01",
         titulo: "Mochila",
-        imagen: "./recursos/productos/indumentaria/mochilas-rick-y-mortyy.webp",
+        imagen: "./recursos/imagenes/productos/indumentaria/mochilas-rick-y-mortyy.webp",
         categoria: {
             nombre: "Indumentaria",
             id: "indumentaria"
@@ -87,7 +87,7 @@ const productos = [
     {
         id: "pantuflas-01",
         titulo: "Pantuflas",
-        imagen: "./recursos/productos/indumentaria/pantunflas-rick-morty.jpg",
+        imagen: "./recursos/imagenes/productos/indumentaria/pantunflas-rick-morty.jpg",
         categoria: {
             nombre: "Indumentaria",
             id: "indumentaria"
@@ -100,3 +100,44 @@ const productos = [
 // POSTERS
 // TAZAS
 // PROXIMAMENTE
+
+
+// capturas
+const contenedorProductos = document.querySelector("#contenedorProductos")
+const botonesCategorias = document.querySelectorAll(".btn-categoria")
+
+// funciones
+function cargarProductos(productosElegidos){
+
+    contenedorProductos.innerHTML =""
+    productosElegidos.forEach (producto=>{
+        const div = document.createElement("div")
+        div.classList.add("producto")
+        div.innerHTML = `
+            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+            <div class="producto-detalles">
+                <h3 class="producto-titulo" >${producto.titulo}</h3>
+                <p class="producto-precio">$ ${producto.precio}</p>
+                <button class="producto-agregar" id= ${producto.id}>AGREGAR</button>
+            </div>
+        `;
+        contenedorProductos.append(div)
+    })
+}
+
+cargarProductos(productos)
+
+botonesCategorias.forEach(boton =>{
+    boton.addEventListener("click", (e)=>{
+        botonesCategorias.forEach(boton => boton.classList.remove("active"))
+        e.currentTarget.classList.add("active")
+
+        if(e.currentTarget.id != "todos"){
+            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id) 
+        cargarProductos(productosBoton)
+        }else{
+            cargarProductos(productos)
+        }
+        
+    } )
+})

@@ -56,11 +56,11 @@ aside .boton-menu {
   gap: 1rem;
   padding: 0.5rem;
   font-weight: 600;
+  width: 100%;
 }
 aside .active {
   background-color: #fef972;
   color: #0e0e0e;
-  width: 100%;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   position: relative;
