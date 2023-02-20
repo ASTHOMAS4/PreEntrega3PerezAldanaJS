@@ -27,7 +27,7 @@ function cargarProductosCarrito(){
             div.classList.add("carrito-producto")  
             div.innerHTML=`
                 
-                <img class="carrito-producto-img" src="${producto.imagen}" alt="${producto.titulo}">
+                <img class="carrito-producto-img" src=".${producto.imagen}" alt="${producto.titulo}">
                 <div class="carrito-producto-titulo">
                     <small>Titulo</small>
                     <h3>${producto.titulo}</h3>
@@ -105,3 +105,4 @@ function comprarCarrito() {
     contenedorCarritoComprado.classList.remove("disabled");
 
 }
+

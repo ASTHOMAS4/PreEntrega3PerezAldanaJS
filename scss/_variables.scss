@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;900&display=swap);
+
+/*variables*/
+
+/*colores*/
+$colorrick: #9FE6E8 ;
+$colormorty: #fef972;
+$colornegro: #0e0e0e;
+$sombraazul: #055ec4;
+$colornavresponsive: #2c3e50;
+$colorgris: lightslategray;
+$clr-white: #ececec;
+  
+
+/*medidas de pantalla*/
+$phone-width: 600px;
+$tablet-width: 768px;
+$laptop-width: 992px;
+$desktop-width: 1040px;
+
+/*estilos textos*/
+$font-family: "Outfit", sans-serif;
+
+$font-p: 1.8rem;
+$font-h1: 3.0rem;
+$font-h2: 2.4rem;
+$font-h3: 2.0rem;
+
+/*GENERALES*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    min-width: 400px;
+    margin:0;
+    padding:0;
+    line-height: 1.6;
+    background-image: linear-gradient( 360deg, #0e0e0e 0%, #10a7c9 );
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+/*textos*/
+.contenidoPage, .registergrid{
+    p{
+        font-size:$font-p;
+        color: $colorrick;
+        font-family: $font-family;
+    }
+
+    h1{
+        font-size: $font-h1;
+        font-family: $font-family;
+        color: $colormorty;
+    }
+    h2{
+        font-size: $font-h2;
+        font-family: $font-family;
+        color: $colormorty;
+    }
+
+    h3{
+        font-size: $font-h3;
+        font-weight:lighter;
+        font-family: $font-family;
+        color: $colormorty;
+    }
+}
+
+
+
+/*botones*/
+
+$padding-button: 10px;
+$borderradius-button: 25px;
+$border-button: 2px;
+$bordestyle-button: solid;
+$width-button: 100px;
+
+.botonbase{
+    font-family: $font-family;
+    font-size: $font-h2; 
+    border-color: $colornegro;
+    padding: $padding-button;
+    border-radius: $borderradius-button;
+    border: $border-button;
+    border-style: $bordestyle-button;
+    min-width: $width-button;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.btn{
+    @extend .botonbase;
+    background-color: $colormorty;
+}
+.btnjerry{
+    @extend .botonbase;
+    background-color: $sombraazul;
+}
+
+
+@mixin cards ($heigth, $width) {
+    height: $heigth;
+    width: $width;
+}
+

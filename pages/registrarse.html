@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registrate en la tienda para obtener descuentos">
+    <meta name="keywords" content="descuentos, ofertas, promociones, argentina, rick, morty, rick y morty, merchandising,">
+
+    <title>REGISTRARSE - WOOBA LOOBA DUB DUB STORE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="headerPrincipal">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="../index.html" class="enlace">
+                <img src="../recursos/imagenes/basicos/logotiendacontitulo.png" alt="logo de la tienda" class="logo">
+            </a>
+
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="./nosotros.html">NOSOTROS</a></li>
+                <li><a href="./catalogo.html">CATALOGO</a></li>
+                <li><a href="./carrito.html">MI CARRITO</a></li>
+                <li><a class="active" href="./registrarse.html">REGISTRARSE</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="registergrid">
+        <section class="centrarbarra">
+            <div class="barra_busqueda">
+                <input type="text" class="input">
+                <div class="material-icons icon">
+                    <a href="./catalogo.html" class="lupa">
+                        <span class="material-icons-outlined">
+                        search
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="iconoCarrito">
+                <a href="./mi-carrito.html">
+                    <img src="../recursos/imagenes/basicos/iconocarrito.png" alt="imagen de carrito" class="fotocarrito">
+                </a>
+            </div>
+        </section>
+        <div class="registertitle">
+            <h1>Registrarse</h1>
+            <p>
+                Obtén descuentos, arma combos y recibe ofertas en tu mail registrándote.
+            </p>
+        </div>
+        
+        <div class="formulario-de-registro">
+            <form action="">
+                <fieldset>
+                    <legend>FORMULARIO DE REGISTRO</legend>
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre">
+
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" required>
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="number" name="telefono">
+
+                    <p>
+                        Género
+                    </p>
+                    <div class="genero">
+                        <label for="sexo">masculino</label>
+                        <input type="radio" name="sexo" value="masculino">
+                        <label for="sexo">femenino</label>
+                        <input type="radio" name="sexo" value="femenino">
+                        <label for="sexo">otro</label>
+                        <input type="radio" name="sexo" value="otro">
+                    </div>
+                        
+
+                    <p>Se Considera</p>
+
+                    <select name="tallas">
+                        <option value="humano">Humano</option>
+                        <option value="alien">Alien</option>
+                        <option value="clon">Clon</option>
+                    </select>
+
+                    <div class="genero">
+                        <label for="Contraseña">Contraseña</label>
+                        <label for="Confirma tu Contraseña">Confirma tu Contraseña</label>
+                    </div>
+                    <div class="genero">
+                        <input type="password" name="contraseña" required>
+                        <input type="password" name="contraseña" required>
+                    </div>
+                        
+
+                    <input class="btn" type="reset" value="Limpiar Info">
+                    <input class="btn" type="submit" value="Completar Registro">
+                </fieldset>
+            </form>
+        </div>
+        <div class="registerCont">
+            <img src="../recursos/imagenes/basicos/imagen-cuerpo-index.png" alt="imagen principal de Rick y Morty"  class="rymimg">
+            <button class="btn">TENGO UN CUPÓN</button>
+        </div>    
+    </div>
+
+    <footer>
+        <div class="pie">
+            <div class="redes">
+                <a href="https://www.facebook.com/">
+                    <img src="../recursos/imagenes/basicos/facebook.png" alt="icono facebook">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="../recursos/imagenes/basicos/instagram.png" alt="icono instagram">
+                </a>
+            </div>
+            <div class="info">
+            
+                <p>Desarrollado por la AJD
+                    <br> Asociación de Jerrys Desempleados
+                </p>
+    
+                <a href="https://rick-y-morty-espanol.fandom.com/es/wiki/Jerry_Smith">
+                    <img src="../recursos/imagenes/basicos/asociacion-de-jerrys-desempleados.jpg" alt="imagen de jerry trabajador" id="jerry" class="shake__lento">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

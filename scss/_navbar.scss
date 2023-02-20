@@ -1,0 +1,64 @@
+// nav bar principal
+#headerPrincipal{
+    nav{
+        background-color: #10a7c9;
+        height: 80px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100000;
+        
+        .enlace{
+            position: absolute;
+            padding: 15px 50px;
+            .logo{
+                height: 50px;
+            }
+        }
+        ul{
+            display: flex;
+            justify-content: right;
+            margin-right: 20px;
+        } 
+        li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;  
+            a{
+                color: $colornegro;
+                font-size: 18px;
+                font-family: "Outfit", sans-serif;
+                padding: 7px 13px;
+                border-radius: 15px;
+                text-transform: uppercase;
+    
+            } 
+            a.active, a:hover{
+                background: $sombraazul;
+                transition: .5s;
+                color: $colormorty;
+            }
+        }
+        
+        i{
+            .active, &:hover{
+                transition: .5s;
+                color: $colormorty;
+            }
+        }
+        .checkbtn{
+            font-size: 30px;
+            color: $colornegro;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        
+    }
+    
+}

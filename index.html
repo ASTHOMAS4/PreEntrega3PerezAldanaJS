@@ -4,65 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo</title>
+    <meta name="description" content="Tienda virtual de productos de Rick y Morty en Argentina.">
+    <meta name="keywords" content="rick, morty, rick y morty, merchandising, pickle rick, funkopops, buenos aires">
+    <title>RICK Y MORTY MULTIVERSAL SHOP AR</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
-    <div class="wrapper">
-        <aside>
-            <header>
-                <h1 class="filtros">FILTROS</h1>
-            </header>
-            <nav>
-                <ul class="menu-filtros">
-                    <li>
-                        <button id="todos" class="btn-categoria boton-menu active">
-                        <i class="bi bi-hand-index-thumb-fill"></i>
-                        Todos los productos</button> 
-                    </li>
-                    <li>
-                        <button id="electronica" class="btn-categoria boton-menu">
-                            <i class="bi bi-hand-index-thumb"></i>
-                        Electronica
-                        </button> 
-                    </li>
-                    <li>
-                        <button id="funkos" class="btn-categoria boton-menu">
-                            <i class="bi bi-hand-index-thumb"></i>
-                        Funkos
-
-                        </button>
-                     </li>
-                    <li>
-                        <button id="indumentaria" class="btn-categoria boton-menu">
-                            <i class="bi bi-hand-index-thumb"></i>
-                        Indumentaria
-
-                        </button> 
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito" href="./carrito.html">
-                            <i class="bi bi-cart-fill"></i>
-                            Carrito <span id="numerito" class="numerito">0</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <footer>
-                <p class="texto-footer">© 2023 Wooba Looba Dub Dub Store</p>
-            </footer>
-        </aside>
-        <main>
-            <h2 class="titulo-principal" id="tituloPrincipal">Todos los productos</h2>
-            <div id="contenedorProductos" class="contenedor-productos">
-
-            </div>
-        </main>
-
+    <div id="headerPrincipal">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="../index.html" class="enlace">
+                <img src="../recursos/imagenes/basicos/logotiendacontitulo.png" alt="logo de la tienda" class="logo">
+                </a>
+            
+            <ul>
+                <li><a class="active" href="./index.html">INICIO</a></li>
+                <li><a href="./pages/nosotros.html">NOSOTROS</a></li>
+                <li><a href="./pages/catalogo.html">CATALOGO</a></li>
+                <li><a href="./pages/carrito.html">MI CARRITO</a></li>
+                <li><a href="./pages/registrarse.html">REGISTRARSE</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <Script src="js/main.js"></Script>
-    <Script src="js/carrito.js"></Script>
+    <section class="contenidoPage">
+        <section class="centrarbarra">
+            <div class="barra_busqueda">
+                <input type="text" class="input buscador" placeholder="Buscar producto...">
+                <div class="material-icons icon">
+                    <a href="./pages/catalogo.html" class="lupa">
+                        <span class="material-icons-outlined">
+                            <i id="lupa" class="bi bi-search"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="iconoCarrito">
+                <a href="./pages/carrito.html">
+                    <img src="./recursos/imagenes/basicos/iconocarrito.png" alt="imagen de carrito" class="fotocarrito">
+                </a>
+            </div>
+        </section>
+        <section class="texto_index">
+            <h1>Wooba Looba 
+                <br>Dub Dub
+            </h1>
+            <p>La tienda de ciencia ficción más canchera de la curva infinita central. O lo que queda de ella. Registrate para recibir descuentos y promociones multiversales.</p>
+            <a href="./pages/registrarse.html">
+                <button class="btn">Registrate aquí</button>
+            </a>
+        </section>
+        <section class="imagen_index">
+            <img src="./recursos/imagenes/basicos/imagen-cuerpo-index.png" alt="imagen principal de Rick y Morty" class="rymimg">
+        </section>
+    </section>
+
+    <footer>
+        <div class="pie">
+            <div class="redes">
+                <a href="https://www.facebook.com/">
+                    <img src="./recursos/imagenes/basicos/facebook.png" alt="icono facebook">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="./recursos/imagenes/basicos/instagram.png" alt="icono instagram">
+                </a>
+            </div>
+            <div class="info">
+            
+                <p>Desarrollado por la AJD
+                    <br> Asociación de Jerrys Desempleados
+                </p>
+    
+                <a href="https://rick-y-morty-espanol.fandom.com/es/wiki/Jerry_Smith">
+                    <img src="./recursos/imagenes/basicos/asociacion-de-jerrys-desempleados.jpg" alt="imagen de jerry trabajador" id="jerry" class="shake__lento">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>

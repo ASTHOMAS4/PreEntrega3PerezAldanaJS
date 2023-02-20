@@ -14,7 +14,7 @@ const productos = [
     // funkos
     {
         id: "funko-01",
-        titulo: "Funko Pikle Rick",
+        titulo: "Funko Pickle Rick",
         imagen: "./recursos/imagenes/productos/funkos/funko-pikle-rick.webp",
         categoria: {
             nombre: "Funkos",
@@ -119,7 +119,7 @@ function cargarProductos(productosElegidos){
         const div = document.createElement("div")
         div.classList.add("producto")
         div.innerHTML = `
-            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+            <img class="producto-imagen" src=".${producto.imagen}" alt="${producto.titulo}">
             <div class="producto-detalles">
                 <h3 class="producto-titulo" >${producto.titulo}</h3>
                 <p class="producto-precio">$ ${producto.precio}</p>
@@ -191,5 +191,27 @@ function actualizarNumerito() {
     numerito.innerText = nuevoNumerito;
 }
 
-//LOCALSTORAGE
+// funcion del buscador en pagina catalogo
+
+document.addEventListener("keyup", e=>{
+
+    if (e.target.matches("#buscador")){
+
+        e.key ==="Escape" && (e.target.value = "")
+
+        document.querySelectorAll(".producto").forEach(elemento =>{
+            elemento.querySelector(".producto-titulo").innerText.toLowerCase().includes(e.target.value.toLowerCase()) 
+            ? elemento.classList.remove("filtro") 
+            : elemento.classList.add("filtro");  
+            
+        })
+    }   
+
+    // if(no hay coincidencias){
+    // (document.getElementById("coincidencia").classList.remove("filtro")) 
+    // } 
+})
+
+
+
 

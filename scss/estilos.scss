@@ -1,16 +1,12 @@
+
+/*IMPORTS DE PARCIALES*/
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
-/*variables*/
-
-/*colores*/
-$colorrick: #9FE6E8 ;
-$colormorty: #fef972;
-$colornegro: #0e0e0e;
-$sombraazul: #055ec4;
-$colornavresponsive: #2c3e50;
-$colorgris: lightslategray;
-$clr-white: #ececec;
-    
+@import "variables" ;
+@import "navbar" ;
+@import "footer" ;
+@import "animaciones";
 
 
 * {
@@ -32,241 +28,259 @@ a {
     text-decoration: none;
 }
 
-body{
+// index y nosotros
+/*TODAS*/
+.contenidoPagecart, .contenidoPage, .titulos, .filtros, .contenidoCatalogo{
+    padding-bottom: 5%;
+}
+
+.contenidoPage{
+    margin-top: 80px;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    "centrarbarra centrarbarra"
+    "texto_index imagen_index";
+    grid-template-columns: 1fr 1fr;
+    
+    align-items: center;
+    justify-content: center;
     
 }
-//INDEX CATALOGO
+/*PAGINA INDEX*/
+
+.centrarbarra{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+    align-content: center;
+    grid-area: centrarbarra;
+    h1{
+        margin-top: 12px;
+    }
+
+    .barra_busqueda{
+        width: 90%;
+        margin-top: 15px;
+        margin-left: 15px;
+        padding: 5px 15px 5px 10px;
+        align-items: center;
+        align-content: center;
+        display: flex;
+        border-radius: 25px;
+        border-color: $colorgris;
+        border: 2px;
+        border-style: solid;
+        min-width: 100px;
+        background-color: #FEF972;
+
+        input{
+            width: 100%;
+            height: 30px;
+            margin: 0 5px;
+            border: none;   
+            &:focus{
+                outline: none;
+            } 
+        }
+        .input{
+            background-color: $colormorty;
+        }
+
+        .icon{
+            display: grid;
+            align-content: center;
+            color: $colornegro;
+            :visited{
+                color: $colornegro;
+                text-decoration: none; 
+            }
+        }
+    }
+    .iconoCarrito{
+        margin-top: 15px;
+        margin-right: 15px;
+        margin-left: 15px;
+        padding: 5px 5px 5px 5px;
+        background-color: $colormorty;
+        display: flex;
+        border-radius: 15px;
+        border-color: $colorgris;
+        border: 2px;
+        border-style: solid;
+        
+        .fotocarrito{
+            height: 35px;
+        }
+    }
+    
+}
+.texto_index{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+    grid-area: texto_index;
+    height: 60%;
+    width: 60%;
+    margin-left: 40%;
+}
+.imagen_index{
+    grid-area: imagen_index; 
+}
+.rymimg{
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    min-width: 150px;
+}
+
+/*PAGINA NOSOTROS*/
+.jerryCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 400px;
+    grid-area: imagen_index;
+    margin-bottom: 20px;
+    margin-left: 10%;
+
+    .jerrymamadoimg{
+        border: solid 4px #FEF972;
+        border-radius: 10%;
+        height: auto;
+        max-width: 300px;
+    }
+}
+.nosotrosTexto{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 80%;
+    margin-top: 0%;
+    margin-bottom: 10%;
+    text-align: right;
+    margin-left: 20%;
+    padding: 20px;
+    grid-area: texto_index;
+}
+//PAGE CATALOGO
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    background-color: $colorrick;
-
-    
-}
-aside{
-    padding: 2rem;
-    padding-right: 0;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .menu-filtros{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
- 
-    }
-    
-    .bi-hand-index-thumb-fill,
-    .bi-hand-index-thumb{ 
-        transform: rotateZ(90deg);
-    }
-
-    .boton-menu{
-        background-color: transparent;
-        border: 0;
-        color: $sombraazul;
-        font-size: 1rem;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        padding: .5rem;
-        font-weight: 600;
-        width: 100%;
-    }
-    .active{
-        background-color: $colormorty;
-        color: $colornegro;
-        border-top-left-radius: 1rem;
-        border-bottom-left-radius: 1rem;
-        position: relative;
-
-        &::before{
-            content:'a';
-            position: absolute;
-            height: 2rem;
-            right: 0;
-            color: transparent;
-            background-color: transparent;
-            bottom: 100%;
-            border-bottom-right-radius: 1rem;
-            box-shadow: 0 1rem $colormorty;
-        }
-        &::after{
-            content:'a';
-            position: absolute;
-            height: 2rem;
-            right: 0;
-            color: transparent;
-            background-color: transparent;
-            top: 100%;
-            border-top-right-radius: 1rem;
-            box-shadow: 0 -1rem $colormorty;
-        }
-    }
-    .boton-carrito{
-        padding-top: 2rem;
-    }
-    .numerito{
-        background-color: $sombraazul;
-        color: $clr-white;
-        padding: 0 .5rem;
-        border-radius: .5rem;
-    }
-    .boton-volver{
-        margin-bottom: 1rem;
-    }
+    background-image: linear-gradient( 360deg, #0e0e0e 0%, #10a7c9 );
+    margin-top: 80px;
+    top: 80px;
 }
 
-.filtros {
-    font-weight: 400;
-    font-size: 1.3rem;
-}
-footer{
-    color: $sombraazul;
-    font-size: 0.85rem;
-}
-main{
-    background-color: $colormorty;
-    margin: 1rem;
-    margin-left: 0;
-    border-radius: 2rem;
-    padding: 3rem;
-
-    .titulo-principal{
-        color: $sombraazul;
-        margin-bottom: 2rem;
-    }
-    .contenedor-productos{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); 
-        gap: 1rem;
-    }  
-    .producto-imagen{
-        max-width: 100%;
-        min-width: 100%;
-        height: 250px;
-        border-radius: 1rem;
-    }   
-    .producto-detalles{
-        background-color: $sombraazul;
-        color: $clr-white;
-        padding: 0.5rem;
-        border-radius: 1rem;
-        margin-top: -2rem;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-
-    }
-    .producto-titulo{
-        font-size: 1rem;
-    }
-    .producto-agregar{
-        border: 0;
-        background-color: $clr-white;
-        color: $sombraazul;
-        padding: 0.5rem;
-        border-radius: 2rem;
-        cursor: pointer;
-        border: 2px solid $clr-white ;
-        &:hover{
-            background-color: $sombraazul;
-            color: $clr-white;
-            transition: background-color .3s, color .3s ;
-        }
-    }
-}
+@import "menuCatalogo";
+@import "productosCatalogo";
 
 // PAGE CARRITO
-.contenedor-carrito{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.carrito-comprado,
-.carrito-vacio{
-    color: $sombraazul;
-}
-.carrito-productos{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.carrito-producto{
-    display: flex;
-    justify-content: space-between;
-    background-color: $colornavresponsive;
-    color: $clr-white;
-    padding: .5rem;
-    border-radius: 1rem;
-    align-content: center;
-    align-items: center;
-    small{
-        font-size: 1 rem;
-    }
-}
-.carrito-producto-img{
-    width: 4rem;
-    border-radius: 1rem;
-}
-.carrito-producto-eliminar{
-    background-color: transparent;
-    border: none;
-    color: red;
-    margin-right: 1rem;
-    cursor: pointer;
-}
-
-.carrito-acciones{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    
-    .carrito-acciones-vaciar{
-    @extend .producto-agregar; 
-    }
-    .carrito-acciones-der{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .carrito-acciones-total{
-        display: flex;
-        gap: 1rem;
-        border: 0;
-        background-color: $clr-white;
-        color: $sombraazul;
-        padding: 0.5rem;
-        border-top-left-radius: 2rem;
-        border-bottom-left-radius: 2rem;
-        border: 2px solid $clr-white ;
-       
-    }
-    .carrito-acciones-comprar{
-        border: 0;
-        background-color: $sombraazul;
-        color: $clr-white;
-        padding: 0.5rem;
-        border-top-right-radius: 2rem;
-        border-bottom-right-radius: 2rem;
-        cursor: pointer;
-        border: 2px solid $sombraazul ;
-        &:hover{
-            background-color: $clr-white;
-            color: $sombraazul;
-            transition: background-color .3s, color .3s ;
-        }
-    }
-}
-
+@import "carrito" ;
 .disabled{
     display: none;
 }
+
+/*PAGINA RESGISTRARSE*/
+.registertitle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+    grid-area: registertitle;
+    h1{
+        margin-bottom: 7px;
+        margin-left: 5px;
+    }
+    p{
+        margin-left: 7px;
+    }
+}
+
+.formulario-de-registro{
+    
+    background-color: $colorrick;
+    border-radius: 20px;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    align-content: center;
+    grid-area: formulario;
+    
+}
+form{
+    display: flex;
+    justify-content: center;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family;
+    font-size: $font-p;
+    padding: 10px;
+    border-radius: 20px;
+    gap: 3px;
+    legend{
+        margin-left: 10px;
+    }
+    p{
+        color: $colornegro;
+    }
+    input{
+        border-radius: 10px;
+    }
+    select{
+        border-radius: 10px;
+    }
+    
+
+}
+.genero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3px;
+}
+
+.registerCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: $colorrick;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-area: registercont;
+}
+
+.registergrid{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-template-areas: 
+    "centrarbarra centrarbarra"
+    "registertitle registertitle"
+    "formulario registercont";
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5%;
+}
+.filtro{
+    display: none;
+}
+@import "responsive";

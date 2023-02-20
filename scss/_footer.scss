@@ -1,0 +1,49 @@
+footer {
+    display: inline;
+    left: 0px;
+    background-color: #10a7c9;
+    position: fixed;
+    width: 100%;
+    bottom:0;
+    justify-content: space-between;
+    padding: 10px;
+    height: 80px;
+
+    p{
+        margin-bottom: 20px;
+        color: $colornegro; 
+        text-align: right;
+        font-size: large;
+        font-family: "Outfit", sans-serif;
+        
+    }
+    img{
+        height: 40px;
+        align-content: space-between;
+        margin: 5px;
+        margin-right: 10px;
+        margin-bottom: 25px;
+        
+    }
+
+    .pie{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 10px;
+
+        .redes{
+            justify-content: left;
+            min-width: 200px;
+        }
+        .info{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            min-width: 350px;
+        }
+    }
+    #jerry{
+        border-radius: 20px;
+    }
+}

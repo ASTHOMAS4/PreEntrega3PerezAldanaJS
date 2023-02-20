@@ -1,0 +1,135 @@
+/*especial*/
+@media (max-width: 952px){
+    nav{
+        .enlace{
+            padding-left: 20px;
+        } 
+        li{
+            a{
+                font-size: 16px; 
+            }
+        }
+    }
+}
+
+
+/*nav*/
+@media (max-width: 858px){
+    #headerPrincipal{
+      nav{
+        .checkbtn{
+            display: block;
+        }
+        ul{
+            display: block;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: $colornavresponsive;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+
+            li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+                a{
+                    font-size: 20px;
+                    color: $colormorty;
+                    .active , &:hover {
+                        color: $colornegro;
+                    }
+                }
+            }  
+        }
+        #check:checked ~ ul{
+            left:0;
+        }
+    }  
+}  
+    }
+    
+
+/*standarts*/
+@media (max-width: $tablet-width){
+    .contenidoPage{
+        grid-template-areas:
+        "centrarbarra"
+        "texto_index"
+        "imagen_index";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;   
+    }
+    .texto_index{
+        align-items: center;
+        height: auto;
+        width: 90%;
+        margin-left: 0%;
+        margin-bottom: 0%;
+        text-align: center;
+        h1{
+            align-items: center;
+        }
+    }
+    .imagen_index{
+        justify-content: center;
+        margin-bottom: auto;
+        margin-left: 15%;
+    }
+    .jerryCard{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nosotrosTexto{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    footer{
+        position: relative;
+        height: 200px;
+        margin-bottom: 0;
+        min-width: 250px;
+
+        display: flex;
+        flex-direction: column;
+
+        p{
+            text-align: center;
+        }
+        img{
+            margin-bottom: 10px;
+            align-content: center;
+            }
+
+        .pie{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            .redes{
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                min-width: 0;
+            }
+            .info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+    .registergrid{
+        grid-template-areas: 
+        "centrarbarra"
+        "registertitle"
+        "formulario"
+        "registercont";
+        grid-template-columns: 1fr;
+    }
+}
