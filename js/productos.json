@@ -1,0 +1,92 @@
+[
+    {
+        "id": "electronica-01",
+        "titulo": "Cargador Morty",
+        "imagen": "./recursos/imagenes/productos/electronica/cargador-morty.jpg",
+        "categoria": {
+            "nombre": "Electronica",
+            "id": "electronica"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "funko-01",
+        "titulo": "Funko Pickle Rick",
+        "imagen": "./recursos/imagenes/productos/funkos/funko-pikle-rick.webp",
+        "categoria": {
+            "nombre": "Funkos",
+            "id": "funkos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "funko-02",
+        "titulo": "Funko JERRY",
+        "imagen": "./recursos/imagenes/productos/funkos/funko-pop-jerry-smith-rick-and-morty.jpg",
+        "categoria": {
+            "nombre": "Funkos",
+            "id": "funkos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "funko-03",
+        "titulo": "Funko SUMMER",
+        "imagen": "./recursos/imagenes/productos/funkos/funko-pop-summer-rick-y-morty.jpg",
+        "categoria": {
+            "nombre": "Funkos",
+            "id": "funkos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "funko-04",
+        "titulo": "Funko UNITY",
+        "imagen": "./recursos/imagenes/productos/funkos/funko-unidad.jpg",
+        "categoria": {
+            "nombre": "Funkos",
+            "id": "funkos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "medias-01",
+        "titulo": "Medias Rick",
+        "imagen": "./recursos/imagenes/productos/indumentaria/medias-rick.jfif",
+        "categoria": {
+            "nombre": "Indumentaria",
+            "id": "indumentaria"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "medias-02",
+        "titulo": "Medias RyM",
+        "imagen": "./recursos/imagenes/productos/indumentaria/medias-rym.jpg",
+        "categoria": {
+            "nombre": "Indumentaria",
+            "id": "indumentaria"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "mochila-01",
+        "titulo": "Mochila",
+        "imagen": "./recursos/imagenes/productos/indumentaria/mochilas-rick-y-mortyy.webp",
+        "categoria": {
+            "nombre": "Indumentaria",
+            "id": "indumentaria"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pantuflas-01",
+        "titulo": "Pantuflas",
+        "imagen": "./recursos/imagenes/productos/indumentaria/pantunflas-rick-morty.jpg",
+        "categoria": {
+            "nombre": "Indumentaria",
+            "id": "indumentaria"
+        },
+        "precio": 1000
+    } 
+]
